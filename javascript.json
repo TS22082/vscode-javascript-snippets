@@ -46,6 +46,6 @@
       "",
       "app.listen(PORT, () => { console.log('listening at http://localhost:' + PORT});"
     ],
-    "description": "creates delete request for express"
+    "description": "creates basic express router"
   }
 }
