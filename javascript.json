@@ -11,7 +11,7 @@
   },
   "http-post-request": {
     "prefix": "post",
-    "body": ["router.post('/', (req, res) => {})"],
+    "body": ["router.post('/${1:path}', (req, res) => { ${2:do} })"],
     "description": "creates post request for express"
   },
   "http-get-request": {
