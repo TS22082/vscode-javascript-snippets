@@ -34,8 +34,8 @@
     "body": ["router.delete('/${1:path}', (req, res) => { ${2:do} })"],
     "description": "creates delete request for express"
   },
-  "create-express-router": {
-    "prefix": "express_router",
+  "create-express-server": {
+    "prefix": "server",
     "body": [
       "const express = require('express');",
       "const app = express();",
@@ -46,6 +46,6 @@
       "",
       "app.listen(PORT, () => { console.log('listening at http://localhost:' + PORT});"
     ],
-    "description": "creates basic express router"
+    "description": "creates basic express server"
   }
 }
