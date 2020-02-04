@@ -1,0 +1,51 @@
+{
+  "arrow": {
+    "prefix": "arrow",
+    "body": ["const arrFunc = (${1:arg}) => {${2:do}}"],
+    "description": "declares arrow function"
+  },
+  "arrow2": {
+    "prefix": "arrow",
+    "body": ["(${1:arg}) => {${2:do}}"],
+    "description": "creates anonomous arrow function"
+  },
+  "http-post-request": {
+    "prefix": "post",
+    "body": ["router.post('/', (req, res) => {})"],
+    "description": "creates post request for express"
+  },
+  "http-get-request": {
+    "prefix": "get",
+    "body": ["router.get('/${1:path}', (req, res) => { ${2:do} })"],
+    "description": "creates get request for express"
+  },
+  "http-put-request": {
+    "prefix": "put",
+    "body": ["router.put('/${1:path}', (req, res) => { ${2:do} })"],
+    "description": "creates put request for express"
+  },
+  "http-patch-request": {
+    "prefix": "patch",
+    "body": ["router.patch('/${1:path}', (req, res) => { ${2:do} })"],
+    "description": "creates patch request for express"
+  },
+  "http-delete-request": {
+    "prefix": "delete",
+    "body": ["router.delete('/${1:path}', (req, res) => { ${2:do} })"],
+    "description": "creates delete request for express"
+  },
+  "create-express-router": {
+    "prefix": "express_router",
+    "body": [
+      "const express = require('express');",
+      "const app = express();",
+      "const PORT = process.env.PORT || 3000;",
+      "",
+      "app.use(express.urlencoded({ extended: true }));",
+      "app.use(express.json());",
+      "",
+      "app.listen(PORT, () => { console.log('listening at http://localhost:' + PORT});"
+    ],
+    "description": "creates delete request for express"
+  }
+}
