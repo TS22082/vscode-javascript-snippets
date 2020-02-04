@@ -1,11 +1,11 @@
 {
   "arrow": {
-    "prefix": "arrow",
+    "prefix": "ar1",
     "body": ["const arrFunc = (${1:arg}) => {${2:do}}"],
     "description": "declares arrow function"
   },
   "arrow2": {
-    "prefix": "arrow",
+    "prefix": "ar2",
     "body": ["(${1:arg}) => {${2:do}}"],
     "description": "creates anonomous arrow function"
   },
