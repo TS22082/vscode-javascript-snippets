@@ -1,51 +1,59 @@
 {
   "arrow": {
     "prefix": "ar1",
-    "body": ["const arrFunc = (${1:arg}) => {${2:do}}"],
+    "body": [
+      "const arrFunc = (${1:arg}) => {${2:do}}"
+    ],
     "description": "declares arrow function"
   },
   "arrow2": {
     "prefix": "ar2",
-    "body": ["(${1:arg}) => {${2:do}}"],
+    "body": [
+      "(${1:arg}) => {${2:do}}"
+    ],
     "description": "creates anonomous arrow function"
   },
-  "http-post-request": {
-    "prefix": "post",
-    "body": ["router.post('/${1:path}', (req, res) => { ${2:do} })"],
-    "description": "creates post request for express"
-  },
-  "http-get-request": {
-    "prefix": "get",
-    "body": ["router.get('/${1:path}', (req, res) => { ${2:do} })"],
-    "description": "creates get request for express"
-  },
-  "http-put-request": {
-    "prefix": "put",
-    "body": ["router.put('/${1:path}', (req, res) => { ${2:do} })"],
-    "description": "creates put request for express"
-  },
-  "http-patch-request": {
-    "prefix": "patch",
-    "body": ["router.patch('/${1:path}', (req, res) => { ${2:do} })"],
-    "description": "creates patch request for express"
-  },
-  "http-delete-request": {
-    "prefix": "delete",
-    "body": ["router.delete('/${1:path}', (req, res) => { ${2:do} })"],
-    "description": "creates delete request for express"
-  },
-  "create-express-server": {
-    "prefix": "server",
+  "Express server": {
+    "prefix": "express_server",
     "body": [
       "const express = require('express');",
       "const app = express();",
-      "const PORT = process.env.PORT || ${1:3000};",
+      "const PORT = process.env.PORT || 5000;",
       "",
-      "app.use(express.urlencoded({ extended: true }));",
+      "if (process.env.NODE_ENV === 'production') {",
+      "  app.use(express.static('client/build'));",
+      "}",
+      "",
+      "app.use(express.urlencoded({ extended: true}));",
       "app.use(express.json());",
       "",
-      "app.listen(PORT, () => { console.log('listening at http://localhost:' + PORT)});"
+      "app.listen(PORT, () => {",
+      "  console.log(`listening at http: //localhost:\\${PORT}`);",
+      "});",
     ],
-    "description": "creates basic express server"
+    "description": "Makes basic express server"
+  },
+  "Express router": {
+    "prefix": "express_router",
+    "body": [
+      "const express = require('express');",
+      "const router = express.Router();",
+      "",
+      "router.get('/example', (req, res) => {",
+      "  res.send('success');",
+      "})",
+      "",
+      "module.exports = router;",
+    ],
+    "description": "Makes basic express router"
+  },
+  "Express route": {
+    "prefix": "route",
+    "body": [
+      "router.${1:type}('/${route}', (req, res) => {",
+      "  res.send('success');",
+      "});"
+    ],
+    "description": "Makes basic express route"
   }
 }
